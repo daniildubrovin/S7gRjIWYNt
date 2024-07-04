@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DubrovinBox</title>
+</head>
+<body>
+    <form action="/registration" method="post">
+        <p>
+            <label for="login">Введите логин:</label>
+            <input type="text" name="login" id="login" required>
+        </p>
+        <p>
+            <label for="password">Введите пароль:</label>
+            <input type="password" name="password" id="password" required>
+        </p>
+        <p> <label id="login_error"></label> </p>
+        <button type="submit">Создать аккаунт</button>
+    </form>
+
+    <script>
+        let cookies = document.cookie.split(";");
+        cookies.forEach(cookie => {
+            if(cookie.includes("registration")){
+                document.getElementById("login_error").innerHTML = cookie.substring(cookie.indexOf("=") + 1);
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DubrovinBox</title>
+    <style>
+        .ib {display: inline-block}
+        .login {margin-left: 1%; color: green}
+        input { font-size: 15pt; }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1 class="ib"> user: </h1>
+        <h1 class="ib login"> dubrovin </h1>
+        <form class="ib" style="margin-left: 20pt" action="/admin" method="post"> <input type="submit" value="admin panel"> </form>
+    </div>
+
+    <div>
+        <div style="float: left; margin-left: 5%; margin-top: 20pt">
+
+            <h1>List of files:</h1>
+            <form action="" method="post"> <input type="submit" value="SHOW ALL FILES"> </form>
+
+            <div>
+                <p class="ib">t/1666358878_38-mykaleidoscope-ru-p-ozero-ritsa-vkontakte-39.jpg</p>
+                <form class="ib" action="/delete" method="post"> <input type="submit" value="delete">  </form>
+                <form class="ib" action="/download" method="post"> <input type="submit" value="download"> </form>
+            </div>
+
+            <div>
+                <p class="ib">text.txt</p>
+                <form class="ib" action="" method="post"> <input type="submit" value="delete"> <input type="submit" value="download"> </form>
+            </div>
+        </div>
+
+        <div style="float: left; margin-left: 20%; margin-top: 20pt">
+            <h1>Load files:</h1>
+            <form  action="" method="post" enctype="multipart/form-data" >
+                <input type="file" multiple>
+                <input type="submit" value="LOAD">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

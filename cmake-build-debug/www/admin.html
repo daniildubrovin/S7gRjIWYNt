@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <style>
+        .ib {display: inline-block}
+        .login {margin-left: 1%; color: red}
+        input { font-size: 15pt; }
+        .delete {margin-left: 20pt;}
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="ib"> admin: </h1>
+        <h1 class="ib login"> dubrovin </h1>
+    </div>
+    <div style="float: left; margin-left: 40%; margin-top: 20pt">
+
+        <h1>List of users:</h1>
+        <form action="" method="post"> <input style="margin-bottom: 35pt" type="submit" value="SHOW ALL USERS"> </form>
+
+        <div>
+            <p class="ib">daniil</p>
+            <form class="ib delete" action="/delete_user" method="post"> <input type="submit" value="delete">  </form>
+        </div>
+
+        <div>
+            <p class="ib">dubrovin</p>
+            <form class="ib delete" action="/delete_user" method="post"> <input type="submit" value="delete">  </form>
+        </div>
+    </div>
+
+</body>
+</html>

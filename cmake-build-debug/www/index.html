@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DubrovinBox</title>
+</head>
+<body>
+    <form action="/authorization" method="post" enctype="multipart/form-data">
+        <p>
+            <label for="login">Введите логин:</label>
+            <input type="text" name="login" id="login" required>
+        </p>
+        <p>
+            <label for="password">Введите пароль:</label>
+            <input type="password" name="password" id="password" required>
+        </p>
+        <p>
+            <label for="file">выберите файл:</label>
+            <input type="file" name="file" id="file" required>
+        </p>
+        <p>
+            <label id="login_error"></label>
+        </p>
+        <button type="submit">Вход</button>
+    </form>
+    <br>
+    <form action="/registration.html" method="get">
+        <button type="submit">регистрация</button>
+    </form>
+
+
+    <script>
+        let cookies = document.cookie.split(";");
+        cookies.forEach(cookie => {
+            if(cookie.includes("authorization"))
+                document.getElementById("login_error").innerHTML = "wrong login or password";
+        });
+
+    </script>
+</body>
+</html>
